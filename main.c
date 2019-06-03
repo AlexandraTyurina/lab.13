@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 typedef struct ip{
 unsigned a:8;
 unsigned b:8;
@@ -18,6 +19,7 @@ int main()
 {
 int a,b,c,d;
 IP p;
+srand(time(NULL));
 scanf("%d.%d.%d.%d", &a, &b, &c, &d);
 p.a = a;
 p.b = b;
