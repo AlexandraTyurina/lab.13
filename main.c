@@ -11,7 +11,7 @@ IP res;
 res.b = p.b;
 res.c = p.c;
 res.d = p.d;
-res.a = 128;
+res.a = rand() % 9 + 127;
 return res;
 }
 int main()
