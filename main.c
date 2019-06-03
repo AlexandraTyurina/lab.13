@@ -11,7 +11,7 @@ IP res;
 res.b = p.b;
 res.c = p.c;
 res.d = p.d;
-res.a = 10;
+res.a = 128;
 return res;
 }
 int main()
