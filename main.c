@@ -7,25 +7,23 @@ unsigned b:8;
 unsigned c:8;
 unsigned d:8;
 }IP;
-IP Pr_IP(IP p){
-IP res;
-res.b = p.b;
-res.c = p.c;
-res.d = p.d;
-res.a = rand() % 9 + 127;
-return res;
+int charswitch (int a)
+{
+    a=a^(1<<7);
+    a=a^(1<<6);
+    a=a^(0<<5);
+    return a;
 }
 int main()
 {
 int a,b,c,d;
 IP p;
-srand(time(NULL));
 scanf("%d.%d.%d.%d", &a, &b, &c, &d);
-p.a = a;
 p.b = b;
 p.c = c;
 p.d = d;
-p = Pr_IP(p);
-printf("%d.%d.%d.%d",p.a, p.b, p.d, p.c);
+p.a = a;
+p.a = charswitch (a);
+printf("%d.%d.%d.%d",p.a, p.b, p.c, p.d);
 return 0;
 }
